@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Hesap Makine</title>
+        
+        <script type="text/javascript">
+            
+            var i = 0;
+            function cfunction(sayi) {
+             if(document.hesaplama.sonuc.value==0) {  
+                document.hesaplama.sonuc.value=sayi;
+                }
+                
+                else 
+                 { 
+                 document.hesaplama.sonuc.value += sayi;
+                 }
+             } 
+            function temizle () {
+                document.hesaplama.sonuc.value = "";
+                i= 0;
+               }
+            
+            
+            
+            function toplama() {
+                
+                 
+                a="+";
+                
+                sayi1 = parseInt(document.hesaplama.sonuc.value);
+                  i = sayi1 + i;
+                  sayi1=0;
+                document.hesaplama.sonuc.value = "";
+                    }
+             function cikarma() {
+                a="-";
+                
+                sayi1 = parseInt(document.hesaplama.sonuc.value);
+                  i = sayi1 + i;
+                  sayi1=0;
+                document.hesaplama.sonuc.value = "";
+             }
+            function bolme() {
+                a="/";
+                
+                sayi1 = parseInt(document.hesaplama.sonuc.value);
+                  i = sayi1 + i;
+                  sayi1=0;
+                document.hesaplama.sonuc.value = "";
+             }
+            function carpma () {
+                a="*";
+                
+                sayi1 = parseInt(document.hesaplama.sonuc.value);
+                  i = sayi1 + i;
+                  sayi1=0;
+                document.hesaplama.sonuc.value = "";
+             }
+           
+            function esittir() {
+                
+                if (a=="+") {
+                sayi2=parseInt(document.hesaplama.sonuc.value);
+                document.hesaplama.sonuc.value = i + sayi2;
+                    sayi2=0;
+                    i=0;
+            
+                }
+                else if (a == "-") {
+                    sayi2=parseInt(document.hesaplama.sonuc.value);
+                document.hesaplama.sonuc.value = i - sayi2;
+                    sayi2=0;
+                    i=0;
+                    
+                } 
+                else if (a == "/") {
+                    sayi2=parseInt(document.hesaplama.sonuc.value);
+                document.hesaplama.sonuc.value = i / sayi2;
+                    sayi2=0;
+                    i=0;
+                    
+                } 
+                else if (a == "*") {
+                    sayi2=parseInt(document.hesaplama.sonuc.value);
+                document.hesaplama.sonuc.value = i * sayi2;
+                    sayi2=0;
+                    i=0; 
+                    
+                }
+                
+              }
+         
+    
+        </script>
+        
+    </head>
+    <body>
+        <form name="hesaplama">
+            <table border="2">
+                <tr>
+                    <td colspan="5">
+                        <input type="text" name="sonuc" Id="sonuc" class="sonuc-txt" value="0" >
+                    
+                    
+                    </td>
+                
+                
+                </tr>
+                
+                <tr>
+                    <td>
+                       <input type="button" class="btn" value="7" onclick="cfunction(7)">
+                    </td>
+                    <td>
+                       <input type="button" class="btn" value="8" onclick="cfunction(8)">
+                    </td>
+                    <td>
+                       <input type="button" class="btn" value="9" onclick="cfunction(9)">
+                    </td>
+                    <td>
+                       <input type="button" class="btn" value="/" onclick="bolme()">
+                    </td>
+                    <td>
+                       <input type="button" class="btn" value="C" onclick="temizle()">
+                    </td>
+                   <tr>
+                    <td>
+                       <input type="button" class="btn" value="4" onclick="cfunction(4)">
+                    </td>
+                    <td>
+                       <input type="button" class="btn" value="5" onclick="cfunction(5)">
+                    </td>
+                    <td>
+                       <input type="button" class="btn" value="6" onclick="cfunction(6)">
+                    </td>
+                    <td>
+                       <input type="button" class="btn" value="*" onclick="carpma()">
+                    </td>
+    
+                
+                    </tr>
+                   <tr>
+                    <td>
+                       <input type="button" class="btn" value="1" onclick="cfunction(1)">
+                    </td>
+                    <td>
+                       <input type="button" class="btn" value="2" onclick="cfunction(2)">
+                    </td>
+                    <td>
+                       <input type="button" class="btn" value="3" onclick="cfunction(3)">
+                    </td>
+                    <td>
+                       <input type="button" class="btn" value="-" onclick="cikarma()">
+                    </td>
+                       
+                       <td rowspan="2">
+                         <input type="button"  value="=" id="esittir-btn" OnClick="esittir()">
+                       </td>
+    
+                
+                    </tr>
+                      <td colspan="3">
+                       <input type="button" class="btn" value="0" onclick="cfunction(0)"><input type="button" class="btn" value="+" onclick="toplama()">
+                      </td>
+                
+                    <tr>
+                
+                
+                
+                    </tr>
+            
+            
+            
+            
+            
+            
+            </table>
+        </form>
+        
+
+        
+    </body>
+</html>
