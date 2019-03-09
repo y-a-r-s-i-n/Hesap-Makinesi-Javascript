@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     
@@ -104,6 +105,11 @@
                 background-color: white;
                 
             }
+            .btnart {
+                width: 40px; height: 42px; text-align: center;
+                background-color: white;
+                
+            }
             table {
                 
                 border-spacing: 0px; border: 0px; margin-top: 10px; 
@@ -115,15 +121,21 @@
                 width: 40px; height: 85px
             }
             .btnc {
-                width: 40px; height: 80px; text-align: center;
+                width: 40px; height: 82px; text-align: center;
                 background-color: white;
             }
             .sonuc-txt {
-                width: 207px; height: 30px
+                border: 0px;
+                
+                width: 209px; height: 35px;
+                text-align: right; text-indent: 20px; direction: rtl; font-size: 20px; cursor: text;
+                background:antiquewhite;
+                 
+                
                 
             }
             .btnsfr {
-                width: 125px; height: 40px; text-align:center;
+                width: 125px; height: 42px; text-align:center;
                 background-color: white;
                 
                 
@@ -139,7 +151,42 @@
                 text-align: center;
                 font-family: cursive;
             }
-        
+            .btna {
+                position: relative;
+                background-color: antiquewhite;
+                border: none;
+                font-size: 22px;
+                color: black;
+                padding: 5px;
+  
+                text-align: center;
+                -webkit-transition-duration: 0.4s; /* Safari */
+                transition-duration: 0.4s;
+                text-decoration: none;
+                overflow: hidden;
+                cursor: pointer;
+                         }
+
+            .btna:after {
+                content: "";
+                background: #90EE90;
+                display: block;
+                position: absolute;
+                padding-top: 300%;
+                padding-left: 350%;
+                margin-left: -20px!important;
+                margin-top: -120%;
+                opacity: 0;
+                transition: all 0.8s
+                        }
+
+            .btna:active:after {
+                padding: 0;
+                margin: 0;
+                opacity: 1;
+                transition: 0s
+                            }
+
         
         
         </style>
@@ -166,51 +213,51 @@
                 
                 <tr>
                     <td>
-                       <input type="button" class="btn" value="7" onclick="cfunction(7)">
+                       <input type="button" class="btn btna" value="7" onclick="cfunction(7)">
                     </td>
                     <td>
-                       <input type="button" class="btn" value="8" onclick="cfunction(8)">
+                       <input type="button" class="btn btna" value="8" onclick="cfunction(8)">
                     </td>
                     <td>
-                       <input type="button" class="btn" value="9" onclick="cfunction(9)">
+                       <input type="button" class="btn btna" value="9" onclick="cfunction(9)">
                     </td>
                     <td>
-                       <input type="button" class="btn" value="/" onclick="bolme()">
+                       <input type="button" class="btn btna" value="/" onclick="bolme()">
                     </td>
                     <td rowspan="2">
-                       <input type="button" class="btnc" value="C" onclick="temizle()">
+                       <input type="button" class="btnc btna" value="C" onclick="temizle()">
                     </td>
                    <tr>
                     <td>
-                       <input type="button" class="btn" value="4" onclick="cfunction(4)">
+                       <input type="button" class="btn btna" value="4" onclick="cfunction(4)">
                     </td>
                     <td>
-                       <input type="button" class="btn" value="5" onclick="cfunction(5)">
+                       <input type="button" class="btn btna" value="5" onclick="cfunction(5)">
                     </td>
                     <td>
-                       <input type="button" class="btn" value="6" onclick="cfunction(6)">
+                       <input type="button" class="btn btna" value="6" onclick="cfunction(6)">
                     </td>
                     <td>
-                       <input type="button" class="btn" value="*" onclick="carpma()">
+                       <input type="button" class="btn btna" value="*" onclick="carpma()">
                     </td>
     
                 
                     </tr>
                    <tr>
                     <td>
-                       <input type="button" class="btn" value="1" onclick="cfunction(1)">
+                       <input type="button" class="btn btna" value="1" onclick="cfunction(1)">
                     </td>
                     <td>
-                       <input type="button" class="btn" value="2" onclick="cfunction(2)">
+                       <input type="button" class="btn btna" value="2" onclick="cfunction(2)">
                     </td>
                     <td>
-                       <input type="button" class="btn" value="3" onclick="cfunction(3)">
+                       <input type="button" class="btn btna" value="3" onclick="cfunction(3)">
                     </td>
                     <td>
-                       <input type="button" class="btn" value="-" onclick="cikarma()">
+                       <input type="button" class="btn btna" value="-" onclick="cikarma()">
                     </td>
                        <td rowspan="2" >
-                         <input type="button" class="esittir-btn" value="=" id="esittir-btn" OnClick="esittir()">
+                         <input type="button" class="esittir-btn btna" value="=" id="esittir-btn" OnClick="esittir()">
                       </td>
                        
                     
@@ -218,11 +265,11 @@
                 
                     </tr>
                       <td colspan="3">
-                       <input  type="button" class="btnsfr" value="0" onclick="cfunction(0)">
+                       <input  type="button" class="btnsfr btna" value="0" onclick="cfunction(0)">
                        
                       </td>
                       <td>
-                       <input type="button" class="btn" value="+" onclick="toplama()">
+                       <input type="button" class="btnart btna" value="+" onclick="toplama()">
                       </td>
                       
                 
