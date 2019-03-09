@@ -25,65 +25,47 @@
             
             
             
-            function toplama() {
-                
-                 
-                a="+";
-                
-                sayi1 = parseInt(document.hesaplama.sonuc.value);
+            function hesap (x)
+                {
+                  a=x;
+                  sayi1 = parseInt(document.hesaplama.sonuc.value);
                   i = sayi1 + i;
                   sayi1=0;
                 document.hesaplama.sonuc.value = "";
                     }
-             function cikarma() {
-                a="-";
-                
-                sayi1 = parseInt(document.hesaplama.sonuc.value);
-                  i = sayi1 + i;
-                  sayi1=0;
-                document.hesaplama.sonuc.value = "";
-             }
-            function bolme() {
-                a="/";
-                
-                sayi1 = parseInt(document.hesaplama.sonuc.value);
-                  i = sayi1 + i;
-                  sayi1=0;
-                document.hesaplama.sonuc.value = "";
-             }
-            function carpma () {
-                a="*";
-                
-                sayi1 = parseInt(document.hesaplama.sonuc.value);
-                  i = sayi1 + i;
-                  sayi1=0;
-                document.hesaplama.sonuc.value = "";
-             }
            
             function esittir() {
                 
-                if (a=="+") {
+                if (a==1) {
                 sayi2=parseInt(document.hesaplama.sonuc.value);
                 document.hesaplama.sonuc.value = i + sayi2;
                     sayi2=0;
                     i=0;
             
                 }
-                else if (a == "-") {
+                else if (a ==2) {
                     sayi2=parseInt(document.hesaplama.sonuc.value);
                 document.hesaplama.sonuc.value = i - sayi2;
                     sayi2=0;
                     i=0;
                     
                 } 
-                else if (a == "/") {
-                    sayi2=parseInt(document.hesaplama.sonuc.value);
-                document.hesaplama.sonuc.value = i / sayi2;
-                    sayi2=0;
-                    i=0;
+                else if (a ==3 ) {
                     
+                    sayi2=parseInt(document.hesaplama.sonuc.value);
+                    if (sayi2==0) {
+                        document.hesaplama.sonuc.value = "Tanimsiz";
+                        sayi2=0;
+                            i=0;
+                        
+                    }
+                       else {
+                            document.hesaplama.sonuc.value = i / sayi2;
+                            sayi2=0;
+                            i=0;
+                     }
                 } 
-                else if (a == "*") {
+                else if (a == 4) {
                     sayi2=parseInt(document.hesaplama.sonuc.value);
                 document.hesaplama.sonuc.value = i * sayi2;
                     sayi2=0;
@@ -221,7 +203,7 @@
                        <input type="button" class="btn btna" value="9" onclick="cfunction(9)">
                     </td>
                     <td>
-                       <input type="button" class="btn btna" value="/" onclick="bolme()">
+                       <input type="button" class="btn btna" value="/" onclick="hesap (3)">
                     </td>
                     <td rowspan="2">
                        <input type="button" class="btnc btna" value="C" onclick="temizle()">
@@ -237,7 +219,7 @@
                        <input type="button" class="btn btna" value="6" onclick="cfunction(6)">
                     </td>
                     <td>
-                       <input type="button" class="btn btna" value="*" onclick="carpma()">
+                       <input type="button" class="btn btna" value="*" onclick="hesap (4)">
                     </td>
     
                 
@@ -253,7 +235,7 @@
                        <input type="button" class="btn btna" value="3" onclick="cfunction(3)">
                     </td>
                     <td>
-                       <input type="button" class="btn btna" value="-" onclick="cikarma()">
+                       <input type="button" class="btn btna" value="-" onclick="hesap (2)">
                     </td>
                        <td rowspan="2" >
                          <input type="button" class="esittir-btn btna" value="=" id="esittir-btn" OnClick="esittir()">
@@ -268,7 +250,7 @@
                        
                       </td>
                       <td>
-                       <input type="button" class="btnart btna" value="+" onclick="toplama()">
+                       <input type="button" class="btnart btna" value="+" onclick="hesap (1)">
                       </td>
                       
                 
